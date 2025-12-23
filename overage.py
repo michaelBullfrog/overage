@@ -57,6 +57,7 @@ EXCLUDED_LICENSE_KEYWORDS = [
     "Basic Meetings",
     "Webex Basic",
     "Meetings Basic",
+    "Advanced Messaging",
 ]
 
 # ============================================================
