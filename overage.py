@@ -53,6 +53,12 @@ MAX_RETRIES = int(os.getenv("WEBEX_MAX_RETRIES", "4"))
 ORG_CONCURRENCY = int(os.getenv("ORG_CONCURRENCY", "5"))
 ORG_CALL_SEMAPHORE = asyncio.Semaphore(ORG_CONCURRENCY)
 
+EXCLUDED_LICENSE_KEYWORDS = [
+    "Basic Meetings",
+    "Webex Basic",
+    "Meetings Basic",
+]
+
 # ============================================================
 # Logging
 # ============================================================
@@ -308,11 +314,17 @@ def build_overage_state(orgs: List[dict], org_licenses: Dict[str, List[dict]]) -
     org_name_map = {o["id"]: o.get("displayName", o["id"]) for o in orgs}
 
     for org_id, licenses in org_licenses.items():
-        org_name = org_name_map.get(org_id, org_id)
-        for lic in licenses:
-            purchased = int(lic.get("totalUnits") or 0)
-            assigned = int(lic.get("consumedUnits") or 0)
-            overage = max(assigned - purchased, 0)
+    org_name = org_name_map.get(org_id, org_id)
+    for lic in licenses:
+        license_name = (lic.get("name") or "").strip()
+
+        # 🚫 Skip excluded / non-billable licenses (e.g., Basic Meetings)
+        if any(k.lower() in license_name.lower() for k in EXCLUDED_LICENSE_KEYWORDS):
+            continue
+
+        purchased = int(lic.get("totalUnits") or 0)
+        assigned = int(lic.get("consumedUnits") or 0)
+        overage = max(assigned - purchased, 0)
 
             key = f"{org_id}|{lic.get('id')}"
             state[key] = {
