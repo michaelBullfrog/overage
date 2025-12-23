@@ -25,13 +25,13 @@ WEBEX_CLIENT_SECRET = ("cf8ed8b26a589764413937de72baa7e52a03e5cf9d8e09db64b4da02
 WEBEX_REDIRECT_URI = ("https://overage.onrender.com/oauth/callback")
 
 # Alert room (Webex space/room ID)
-WEBEX_ALERT_ROOM_ID = ("Y2lzY29zcGFyazovL3VzL1JPT00vM2NiZDJkODAtZTAwMy0xMWYwLWE4NTQtYWJiZGZmNDRhZjIz")
+WEBEX_ALERT_ROOM_ID = ("Y2lzY29zcGFyazovL3VzL1JPT00vYjAwZTg4MDAtZTAzYi0xMWYwLThjMTctMGI2Yjc1ZDAyOTFl")
 
 # Optional: temporary testing token via env (NOT recommended for long term)
 HARDCODED_ACCESS_TOKEN = ("ZDM3MjRlYzMtNjk0YS00YWVlLWJkMGEtNTk5NzU2MWNiMjE4YjI1MDQ2MzgtZmEz_PF84_7726209c-42bf-4dd2-a7ed-6f1139040882")
 
 # Schedule (minutes)
-CHECK_EVERY_MINUTES = int(os.getenv("CHECK_EVERY_MINUTES", "5"))
+CHECK_EVERY_MINUTES = int(os.getenv("CHECK_EVERY_MINUTES", "1440"))
 
 # Reporting controls
 POST_SUMMARY_EVERY_RUN = ("POST_SUMMARY_EVERY_RUN", "true")
