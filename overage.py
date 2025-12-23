@@ -489,7 +489,7 @@ async def startup():
     # schedule job (no extra immediate run, so no duplicate posts)
     scheduler.add_job(run_check, "interval", minutes=CHECK_EVERY_MINUTES, id="run_check", coalesce=True, max_instances=1)
     scheduler.start()
-    logger.info(f"✅ Scheduler started (every {CHECK_EVERY_MINUTES} minutes).")
+    logger.info(f"✅ Scheduler started (every 1440 minutes).")
 
 
 @app.on_event("shutdown")
