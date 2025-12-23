@@ -22,7 +22,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 # ============================================================
 WEBEX_CLIENT_ID = ("C764fb80894c93c6b21dd540cf13b14915ea239c89ec4cb43b793eff7cd686b5f")
 WEBEX_CLIENT_SECRET = ("cf8ed8b26a589764413937de72baa7e52a03e5cf9d8e09db64b4da020e38553f")
-WEBEX_REDIRECT_URI = ("WEBEX_REDIRECT_URI", "http://localhost:8080/oauth/callback")
+WEBEX_REDIRECT_URI = ("WEBEX_REDIRECT_URI", "https://overage.onrender.com/oauth/callback")
 
 # Alert room (Webex space/room ID)
 WEBEX_ALERT_ROOM_ID = ("Y2lzY29zcGFyazovL3VzL1JPT00vM2NiZDJkODAtZTAwMy0xMWYwLWE4NTQtYWJiZGZmNDRhZjIz")
