@@ -28,7 +28,7 @@ WEBEX_REDIRECT_URI = ("https://overage.onrender.com/oauth/callback")
 WEBEX_ALERT_ROOM_ID = ("Y2lzY29zcGFyazovL3VzL1JPT00vYjAwZTg4MDAtZTAzYi0xMWYwLThjMTctMGI2Yjc1ZDAyOTFl")
 
 # Optional: temporary testing token via env (NOT recommended for long term)
-HARDCODED_ACCESS_TOKEN = ("ZDM3MjRlYzMtNjk0YS00YWVlLWJkMGEtNTk5NzU2MWNiMjE4YjI1MDQ2MzgtZmEz_PF84_7726209c-42bf-4dd2-a7ed-6f1139040882")
+HARDCODED_ACCESS_TOKEN = ("YTgyNjRiMDgtMGRjNC00NWZkLTgxZTItMGEzY2VmMTcyMTBlOWUxMTkwMTktYjk5_PF84_7726209c-42bf-4dd2-a7ed-6f1139040882")
 
 # Schedule (minutes)
 CHECK_EVERY_MINUTES = int(os.getenv("CHECK_EVERY_MINUTES", "1440"))
