@@ -25,7 +25,7 @@ WEBEX_CLIENT_SECRET = ("cf8ed8b26a589764413937de72baa7e52a03e5cf9d8e09db64b4da02
 WEBEX_REDIRECT_URI = ("https://overage.onrender.com/oauth/callback")
 
 # Alert room (Webex space/room ID)
-WEBEX_ALERT_ROOM_ID = ("Y2lzY29zcGFyazovL3VzL1JPT00vYjAwZTg4MDAtZTAzYi0xMWYwLThjMTctMGI2Yjc1ZDAyOTFl")
+WEBEX_ALERT_ROOM_ID = ("YTU0YWYwZWMtMGU1MC00MzVmLTljZDEtMzVkOGMwZDA3ODc3NTRlZmY4ZjItNGQz_PF84_7726209c-42bf-4dd2-a7ed-6f1139040882")
 
 # Optional: temporary testing token via env (NOT recommended for long term)
 HARDCODED_ACCESS_TOKEN = ("YTgyNjRiMDgtMGRjNC00NWZkLTgxZTItMGEzY2VmMTcyMTBlOWUxMTkwMTktYjk5_PF84_7726209c-42bf-4dd2-a7ed-6f1139040882")
